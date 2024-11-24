@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align:center">
+  <h1>Edit page</h1>
+
+</div>
+<div>
+
+<form method="post" action="{% url 'update_student_page' up_id=data.id %}">
+    {% csrf_token %}
+
+
+
+
+
+<div style="text-align:center">
+    <input type="text" placeholder="Name" name="c-name" value="{{data.NAME}}"><br><br>
+    <input type="number" placeholder="Age" name="c-age" value="{{data.AGE}}"><br><br>
+
+    <label>Select your gender</label>
+    <select name="c-gender">
+        <option>{{data.GENDER}}</option>
+        <option>Male</option>
+        <option>female</option>
+    </select><br><br>
+
+    <input type="text" placeholder="mobile" name="c-mobile" value="{{data.MOBILE}}"><br><br>
+    <input type="text" placeholder="Tutor" name="c-tutor" value="{{data.TUTOR}}"><br><br>
+
+
+    <button type="submit">update</button>
+
+
+
+
+</div >
+
+</form>
+</div>
+
+</body>
+</html>
